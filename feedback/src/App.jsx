@@ -1,12 +1,12 @@
 import React from "react";
 import Sidepanel from "./components/sidebar/Sidepanel.jsx";
-import Roadmap from "./components/Roadmap.jsx";
+import Header from "./components/sidebar/Header.jsx";
 
 const App = () => {
   return (
-    <div>
+    <div className="flex">
       <Sidepanel />
-      <Roadmap />
+      <Header />
     </div>
   );
 };

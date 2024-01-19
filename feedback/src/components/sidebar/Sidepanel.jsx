@@ -1,6 +1,7 @@
 import React from "react";
 import Tags from "./Tags.jsx";
-import Roadmap from "../Roadmap.jsx";
+import Roadmap from "./Roadmap.jsx";
+
 const Sidepanel = () => {
   return (
     <section className="sidepanel bg-primary p-12 ">

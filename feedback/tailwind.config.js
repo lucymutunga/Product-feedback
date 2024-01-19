@@ -14,6 +14,7 @@ export default {
         tags: "#4661E6",
         tagsback: "#F2F4FF",
         all: " #4661E6",
+        header: " #373F68",
 
         //radial gradient
         "radial-gradient":
