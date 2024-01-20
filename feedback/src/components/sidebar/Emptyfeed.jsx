@@ -1,8 +1,8 @@
 import React from "react";
-
+import Button from "./Button";
 const Emptyfeed = () => {
   return (
-    <div className=" mt-60 ml-60">
+    <div className="flex flex-col justify-center items-center mt-28">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="131"
@@ -120,6 +120,14 @@ const Emptyfeed = () => {
           />
         </g>
       </svg>
+      <h2 className="font-bold text-[#3A4374]">There is no feedback yet.</h2>
+      <div></div>
+      <p className="ml-6">
+        Got a suggestion? Found a bug that needs to be squashed? We love hearing
+        about new ideas to improve our app.
+      </p>
+
+      <Button />
     </div>
   );
 };
