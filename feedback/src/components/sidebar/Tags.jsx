@@ -2,7 +2,7 @@ import React from "react";
 
 const Tags = () => {
   return (
-    <section className="tags hidden md:flex rounded-lg my-4 ml-16  md:my-0 bg-secondary w-64 h-40">
+    <section className="tags md:flex rounded-lg my-4 ml-16  md:my-0 bg-secondary w-64 h-40 lg:m-2">
       <div className="tags-content">
         <div className="tags-info">
           <ul className="tags-list-items">

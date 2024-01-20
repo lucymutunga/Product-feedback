@@ -10,7 +10,7 @@ const Sidepanel = () => {
   };
 
   return (
-    <section className="sidepanel bg-primary md:hidden sidepanel-content flex justify-between items-center   bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg h-32 w-full  p-5">
+    <section className="sidebar bg-primary md:hidden sidepanel-content flex justify-between items-center   bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg h-32 w-fit  p-5">
       <div className="w-full">
         <h1 className="intro-heading text-white font-bold ">Frontend Mentor</h1>
         <p className="intro-sub-heading text-white ">Feedback Board</p>
@@ -48,7 +48,7 @@ const Sidepanel = () => {
         </button>
       </div>
       {isOpen && (
-        <div className="absolute top-40 right-0">
+        <div className="absolute top-40 right-0 ">
           <Tags />
           <Roadmap />
         </div>

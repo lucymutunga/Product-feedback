@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.sidepanel {
+.sidebar {
   width: 100vw;
 }

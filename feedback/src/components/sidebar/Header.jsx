@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const Header = () => {
   return (
-    <section className="flex justify-between items-center  bg-header w-auto h-24 rounded-lg  p-5 lg:w-11/12">
+    <section className="flex justify-between items-center  bg-header w-auto h-24 rounded-lg  p-5 lg:w-11/12 ">
       <div className=" hidden  text-white font-semibol ml-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
