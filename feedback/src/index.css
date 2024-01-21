@@ -3,5 +3,28 @@
 @tailwind utilities;
 
 .sidebar {
-  width: 100vw;
+  width: 390px;
 }
+.header {
+  width: 390px;
+}
+.whole {
+  /* width: 768px;
+  height: 1024px; */
+  background-color: #f7f8fd;
+}
+.empty {
+  width: 327px;
+  height: 460px;
+}
+/* 
+@media only screen and (min-width: 1085px) and (max-width: 1440px) {
+  .header {
+    width: 825px;
+    height: 72px;
+  }
+  .empty {
+    width: 825px;
+    height: 600px;
+  }
+} */

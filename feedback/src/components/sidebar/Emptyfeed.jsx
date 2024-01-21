@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 const Emptyfeed = () => {
   return (
-    <div className="flex flex-col justify-center items-center mt-28">
+    <div className=" empty flex flex-col justify-center items-center w-80  h-96 mt-8 ml-6 md:w-auto md:h-auto md:ml-30 bg-[#FFFFFF] md:mt-8 md:py-52 lg:w-full ">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="131"
@@ -120,14 +120,19 @@ const Emptyfeed = () => {
           />
         </g>
       </svg>
-      <h2 className="font-bold text-[#3A4374]">There is no feedback yet.</h2>
-      <div></div>
-      <p className="ml-6">
-        Got a suggestion? Found a bug that needs to be squashed? We love hearing
-        about new ideas to improve our app.
-      </p>
-
-      <Button />
+      <div className="flex flex-col justify-between items-center p-10 md:w-auto md:h-auto md:p-2 md:ml-6">
+        <h2 className="font-bold text-[#3A4374]   h-6 md:w-64 md:h-9 md:mt-8">
+          There is no feedback yet.
+        </h2>
+        <div></div>
+        <p className=" md:h-12 font-light md:mt-2 md:w-96">
+          Got a suggestion? Found a bug that needs to be squashed? We love
+          hearing about new ideas to improve our app.
+        </p>
+        <div className="md:mt-10 mt-8">
+          <Button />
+        </div>
+      </div>
     </div>
   );
 };

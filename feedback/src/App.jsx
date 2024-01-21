@@ -7,10 +7,10 @@ import Roadmap from "./components/sidebar/Roadmap.jsx";
 
 const App = () => {
   return (
-    <div className="flex  flex-col mt-16">
+    <div className=" whole flex  flex-col mt-4  md:w-auto lg:w-auto ">
       <div className="lg:flex flex-col ">
         <div className="lg:flex ">
-          <div className="md:flex lg:block">
+          <div className="md:flex lg:block md:mx-6">
             <Sidepaneldesktop />
             <div className="hidden md:flex lg:block">
               <Tags />
@@ -30,10 +30,10 @@ const App = () => {
           <Roadmap />
         </div>
       </div>
-      <div className="lg:hidden">
+      <div className="lg:hidden md:mx-6">
         <Header />
       </div>
-      <div className="lg:hidden">
+      <div className="lg:hidden   ">
         <Emptyfeed />
       </div>
     </div>

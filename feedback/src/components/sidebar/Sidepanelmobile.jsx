@@ -10,7 +10,7 @@ const Sidepanel = () => {
   };
 
   return (
-    <section className="sidebar bg-primary md:hidden sidepanel-content flex justify-between items-center   bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg h-32 w-fit  p-5">
+    <section className="sidebar bg-primary md:hidden sidepanel-content flex justify-between items-center   bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  h-32 w-100  p-5 mx-2 ml-0">
       <div className="w-full">
         <h1 className="intro-heading text-white font-bold ">Frontend Mentor</h1>
         <p className="intro-sub-heading text-white ">Feedback Board</p>
