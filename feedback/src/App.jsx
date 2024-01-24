@@ -17,7 +17,7 @@ const App = () => {
               <Roadmap />
             </div>
           </div>
-          <div className="hidden lg:block">
+          <div className="hidden lg:block lg:w-full">
             <Header />
             <Emptyfeed />
           </div>
