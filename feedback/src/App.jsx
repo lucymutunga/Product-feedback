@@ -1,7 +1,7 @@
 import React from "react";
 import Sidepaneldesktop from "./components/sidebar/Sidepaneldesktop.jsx";
 import Header from "./components/sidebar/Header.jsx";
-import Emptyfeed from "./components/sidebar/Emptyfeed.jsx";
+import EmptyFeed from "./components/sidebar/EmptyFeed.jsx";
 import Tags from "./components/sidebar/Tags.jsx";
 import Roadmap from "./components/sidebar/Roadmap.jsx";
 
@@ -19,7 +19,7 @@ const App = () => {
           </div>
           <div className="hidden lg:block lg:w-full">
             <Header />
-            <Emptyfeed />
+            <EmptyFeed />
           </div>
         </div>
 
@@ -34,7 +34,7 @@ const App = () => {
         <Header />
       </div>
       <div className="lg:hidden   ">
-        <Emptyfeed />
+        <EmptyFeed />
       </div>
     </div>
   );
