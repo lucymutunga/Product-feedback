@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Button";
-const Emptyfeed = () => {
+const EmptyFeed = () => {
   return (
     <div className=" empty flex flex-col justify-center items-center w-80  h-96 mt-8 ml-6 md:w-auto md:h-auto md:ml-30 bg-[#FFFFFF] md:mt-8 md:py-52 lg:w-full ">
       <svg
@@ -137,4 +137,4 @@ const Emptyfeed = () => {
   );
 };
 
-export default Emptyfeed;
+export default EmptyFeed;
