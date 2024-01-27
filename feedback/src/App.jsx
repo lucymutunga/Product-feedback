@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Section from "./Pages/Section.jsx";
-import Suggestions from "./components/sidebar/Suggestions.jsx";
+import Section from "./Pages/Section";
+import AddFeedback from "./components/sidebar/AddFeedback";
+import ViewPage from "./components/sidebar/ViewPage";
 
 const App = () => {
   return (
@@ -9,7 +10,8 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Section />} />
-          <Route path="/suggestions" element={<Suggestions />} />
+          <Route path="/addfeedback" element={<AddFeedback />} />
+          <Route path="/view" element={<ViewPage />} />
         </Routes>
       </Router>
     </div>
