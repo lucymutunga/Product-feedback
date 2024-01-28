@@ -1,20 +1,23 @@
 import React from "react";
 import Button from "./Button";
 import Cancel from "./Cancel";
+import { Link } from "react-router-dom";
 const AddFeedback = () => {
   return (
     <div className="feed-container bg-[#F7F8FD] w-80 h-auto ">
       <div className="flex p-4 my-4">
-        <svg
-          className="mt-2"
-          xmlns="http://www.w3.org/2000/svg"
-          width="5"
-          height="10"
-          viewBox="0 0 5 10"
-          fill="none"
-        >
-          <path d="M4 9L0 5L4 1" stroke="#4661E6" stroke-width="2" />
-        </svg>
+        <Link to={"/"}>
+          <svg
+            className="mt-2"
+            xmlns="http://www.w3.org/2000/svg"
+            width="5"
+            height="10"
+            viewBox="0 0 5 10"
+            fill="none"
+          >
+            <path d="M4 9L0 5L4 1" stroke="#4661E6" stroke-width="2" />
+          </svg>
+        </Link>
         <h2 className="ml-4">Go back</h2>
       </div>
       <div className="feed-content p-4 bg-[#FFFFFF] w-72 h-auto">

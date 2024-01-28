@@ -4,6 +4,7 @@ import Tags from "../components/sidebar/Tags";
 import Roadmap from "../components/sidebar/Roadmap";
 import Header from "../components/sidebar/Header";
 import EmptyFeed from "../components/sidebar/EmptyFeed";
+import ViewPage from "../components/sidebar/ViewPage";
 
 const Section = () => {
   return (
@@ -35,6 +36,7 @@ const Section = () => {
       <div className="lg:hidden   ">
         <EmptyFeed />
       </div>
+      <ViewPage />
     </div>
   );
 };

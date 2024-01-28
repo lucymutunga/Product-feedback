@@ -26,6 +26,9 @@
 .drops li:hover {
   color: #ad1fea;
 }
+.view-container {
+  height: 50rem;
+}
 /* 
 @media only screen and (min-width: 1085px) and (max-width: 1440px) {
   .header {
