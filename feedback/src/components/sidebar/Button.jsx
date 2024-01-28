@@ -9,7 +9,7 @@ const Button = () => {
     <span>
       <button
         onClick={handleClick}
-        className="text-white font-medium  bg-[#AD1FEA] hover:bg-[#C75AF6] py-2 px-2 rounded-lg md:w-40 md:h-11  "
+        className="text-white font-medium  bg-[#AD1FEA] hover:bg-[#C75AF6] py-2 px-2 rounded-lg md:w-40 md:h-11 w-60"
       >
         + Add Feedback
       </button>
