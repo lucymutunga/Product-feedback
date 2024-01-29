@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Tags = () => {
   return (
@@ -7,9 +8,11 @@ const Tags = () => {
         <div className="tags-info">
           <ul className="tags-list-items">
             <div className="flex mx-4 ">
-              <li className="tag-item rounded-lg p-2 bg-all mt-4 mr-2 text-white font-bold">
-                All
-              </li>
+              <Link to="/all">
+                <li className="tag-item rounded-lg p-2 bg-all mt-4 mr-2 text-white font-bold">
+                  All
+                </li>
+              </Link>
               <li className="tag-item rounded-lg p-2 bg-tagsback mt-4 mr-2 text-tags font-bold">
                 UI
               </li>

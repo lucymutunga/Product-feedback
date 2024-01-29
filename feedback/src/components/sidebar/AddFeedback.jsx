@@ -4,7 +4,7 @@ import Cancel from "./Cancel";
 import { Link } from "react-router-dom";
 const AddFeedback = () => {
   return (
-    <div className="feed-container bg-[#F7F8FD] w-80 h-auto ">
+    <div className="feed-container bg-[#F7F8FD] w-80 h-auto ml-4 ">
       <div className="flex p-4 my-4">
         <Link to={"/"}>
           <svg
