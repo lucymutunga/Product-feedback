@@ -29,14 +29,9 @@
 .view-container {
   height: 50rem;
 }
-/* 
-@media only screen and (min-width: 1085px) and (max-width: 1440px) {
-  .header {
-    width: 825px;
-    height: 72px;
+
+@media only screen and (min-width: 834px) and (max-width: 1040px) {
+  .all-content {
+    width: 689px;
   }
-  .empty {
-    width: 825px;
-    height: 600px;
-  }
-} */
+}

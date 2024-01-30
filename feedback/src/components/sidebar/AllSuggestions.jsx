@@ -2,17 +2,17 @@ import React from "react";
 
 const AllSuggestions = () => {
   return (
-    <div className=" flex flex-col  items-center  bg-[#F7F8FD] w-96  ml-4 mt-2 p-4 h-max">
-      <div className="flex flex-col rounded-lg border-8 border-white    bg-[#FFFFFF] w-80 h-56 mb-2 ">
+    <div className=" flex flex-col  items-center  bg-[#F7F8FD] w-96  ml-4 mt-2 p-4 h-max md:w-full">
+      <div className="  flex flex-col rounded-lg border-8 border-white bg-[#FFFFFF] w-fit h-56 mb-2 md:w-full md:px-20 md:py-8 ">
         <h2 className="font-bold text-[#3A4374]">Add tags for solutions</h2>
         <p className="text-[#647196] font-light">
           Easier to search for solutions based on a specific stack.
         </p>
         <div className="rounded-lg bg-[#F2F4FF] w-40 h-7 mt-2">
-          <h2 className="text-[#4661E6] text-center">Enhancement</h2>
+          <h2 className="text-[#4661E6] text-center ">Enhancement</h2>
         </div>
         <div>
-          <div className="flex justify-between ">
+          <div className="flex justify-between">
             <span className=" flex rounded-lg bg-[#F2F4FF] w-20 h-7 mt-2 p-1 ">
               <svg
                 className="mt-2 mr-2"
@@ -26,7 +26,7 @@ const AllSuggestions = () => {
               </svg>
               <p>9</p>
             </span>
-            <span className="flex mt-2">
+            <span className="flex mt-2 md:absolute  md:end-0 md:mr-4 ">
               <svg
                 className="mt-1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ const AllSuggestions = () => {
         </div>
       </div>
 
-      <div className="flex flex-col rounded-lg border-8 border-white    bg-[#FFFFFF] w-80 h-56 mb-2 ">
+      <div className="flex flex-col rounded-lg border-8 border-white    bg-[#FFFFFF] w-auto h-56 mb-2 md:w-full md:px-20 md:py-8">
         <h2 className="font-bold text-[#3A4374]">Add a dark theme option</h2>
         <p className="text-[#647196] font-light">
           It would help people with light sensitivities and who prefer dark
@@ -90,7 +90,7 @@ const AllSuggestions = () => {
         </div>
       </div>
 
-      <div className="flex flex-col rounded-lg border-8 border-white    bg-[#FFFFFF] w-80 h-56 mb-2 ">
+      <div className="flex flex-col rounded-lg border-8 border-white    bg-[#FFFFFF] w-auto h-56 mb-2 md:w-full md:px-20 md:py-8">
         <h2 className="font-bold text-[#3A4374]">
           Q&A within the challenge hubs
         </h2>
@@ -135,7 +135,7 @@ const AllSuggestions = () => {
         </div>
       </div>
 
-      <div className="flex flex-col rounded-lg border-8 border-white    bg-[#FFFFFF] w-80 h-56 mb-2 ">
+      <div className="flex flex-col rounded-lg border-8 border-white    bg-[#FFFFFF] w-auto h-56 mb-2 md:w-full md:px-20 md:py-8">
         <h2 className="font-bold text-[#3A4374]">Allow image/video upload </h2>
         <p className="text-[#647196] font-light">
           Images and screencasts can enhance comments on solutions.
@@ -178,7 +178,7 @@ const AllSuggestions = () => {
         </div>
       </div>
 
-      <div className="flex flex-col rounded-lg border-8 border-white    bg-[#FFFFFF] w-80 h-56 mb-2 ">
+      <div className="flex flex-col rounded-lg border-8 border-white    bg-[#FFFFFF] w-auto h-56 mb-2 md:w-full md:px-20 md:py-8">
         <h2 className="font-bold text-[#3A4374]">Ability to follow others</h2>
         <p className="text-[#647196] font-light">
           Stay updated on comments and solutions other people post.
@@ -221,7 +221,7 @@ const AllSuggestions = () => {
         </div>
       </div>
 
-      <div className="flex flex-col rounded-lg border-8 border-white    bg-[#FFFFFF] w-80 h-56 mb-2 ">
+      <div className="flex flex-col rounded-lg border-8 border-white    bg-[#FFFFFF] w-auto h-56 mb-2 md:w-full md:px-20 md:py-8">
         <h2 className="font-bold text-[#3A4374]">Preview images not loading</h2>
         <p className="text-[#647196] font-light">
           Challenge preview images are missing when you apply a filter.
