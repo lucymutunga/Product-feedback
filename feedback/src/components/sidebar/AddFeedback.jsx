@@ -1,6 +1,5 @@
 import React from "react";
-import Button from "./Button";
-import Cancel from "./Cancel";
+
 import { Link } from "react-router-dom";
 const AddFeedback = () => {
   return (
@@ -106,10 +105,13 @@ const AddFeedback = () => {
               rows="10"
             ></textarea>
           </div>
-          <div className="flex flex-col ">
-            <Button />
-
-            <Cancel />
+          <div className="flex flex-col text-white">
+            <button className="bg-[#AD1FEA] w-60 rounded-lg p-1 my-1">
+              Add Feedback
+            </button>
+            <button className="bg-[#3A4374] w-60 rounded-lg p-1 my-1">
+              Cancel
+            </button>
           </div>
         </form>
       </div>
