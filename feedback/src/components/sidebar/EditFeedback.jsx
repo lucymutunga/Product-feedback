@@ -21,7 +21,7 @@ const EditFeedback = () => {
       </div>
       <div className="feed-content p-4 bg-[#FFFFFF] w-72 h-auto md:w-auto md:h-auto md:mt-0">
         <svg
-          className="absolute top-16 md:mt-44 "
+          className="absolute top-16 md:mt-44 lg:mt-2"
           xmlns="http://www.w3.org/2000/svg"
           width="40"
           height="40"
