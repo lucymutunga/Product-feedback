@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import image1 from "../../assets/user-images/image.png";
 const FeedbackDetail = () => {
   return (
     <div className="detail-container bg-[#F7F8FD] w-96 h-max p-4">
@@ -72,7 +73,7 @@ const FeedbackDetail = () => {
           <h1 className="text-[#3A4374] font-bold ml-5 p-4">4 Comments</h1>
           <div className=" border-b">
             <div className="flex justify-between p-6">
-              <p>image</p>
+              <img src={image1} alt="" className="rounded-full w-16 h-auto" />
               <div className="flex flex-col">
                 <p className="text-[#3A4374] font-semibold">Elijah Moss</p>
                 <p className="text-[#647196] ">@hexagon.bestagon</p>
@@ -133,6 +134,20 @@ const FeedbackDetail = () => {
               the evening after my device’s dark mode turns on without the
               bright background it currently has.
             </p>
+          </div>
+        </div>
+      </div>
+      <div className="comment-container border start-0 ml-4 w-80 h-50 bg-white">
+        <h1 className="font-bold">Add Comment</h1>
+        <div className="w-60 h-34">
+          <input
+            type="text"
+            placeholder="Type your comment here"
+            className="w-80"
+          />
+          <div>
+            <p>250 characters left</p>
+            <button className="bg-[#AD1FEA]">Post Comment</button>
           </div>
         </div>
       </div>
