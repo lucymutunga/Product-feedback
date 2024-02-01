@@ -3,11 +3,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 const EditFeedback = () => {
   return (
-    <div className="feed-container bg-[#F7F8FD] w-80 h-auto ml-4 ">
-      <div className="flex p-4 my-4">
+    <div className="feed-container flex flex-col justify-center items-center bg-[#F7F8FD] w-80 h-auto ml-4 md:w-screen md:h-svh lg:h-auto">
+      <div className="flex p-4 my-4 mr-40 md:mr-96 ">
         <Link to={"/"}>
           <svg
-            className="mt-2"
+            className="mt-2 "
             xmlns="http://www.w3.org/2000/svg"
             width="5"
             height="10"
@@ -19,9 +19,9 @@ const EditFeedback = () => {
         </Link>
         <h2 className="ml-4">Go back</h2>
       </div>
-      <div className="feed-content p-4 bg-[#FFFFFF] w-72 h-auto">
+      <div className="feed-content p-4 bg-[#FFFFFF] w-72 h-auto md:w-auto md:h-auto md:mt-0">
         <svg
-          className="absolute top-16 "
+          className="absolute top-16 md:mt-44 "
           xmlns="http://www.w3.org/2000/svg"
           width="40"
           height="40"
@@ -60,7 +60,7 @@ const EditFeedback = () => {
 
             <p className="font-light my-1">Add a short, descriptive headline</p>
             <input
-              className="bg-[#F7F8FD] min-w-60"
+              className="bg-[#F7F8FD] min-w-60 md:w-full"
               type="text"
               name="feedback"
             />
@@ -74,7 +74,7 @@ const EditFeedback = () => {
             </p>
             <div className="flex  ">
               <input
-                className="bg-[#F7F8FD] w-60 "
+                className="bg-[#F7F8FD] w-60 md:w-full "
                 type="text"
                 name="category"
                 placeholder="Feature"
@@ -100,7 +100,7 @@ const EditFeedback = () => {
             </p>
             <div className="flex  ">
               <input
-                className="bg-[#F7F8FD] w-60 "
+                className="bg-[#F7F8FD] w-60 md:w-full"
                 type="text"
                 name="category"
                 placeholder="Feature"
@@ -125,7 +125,7 @@ const EditFeedback = () => {
             <p className="font-light my-1">Change feature state</p>
             <div className="flex  ">
               <input
-                className="bg-[#F7F8FD] w-60 "
+                className="bg-[#F7F8FD] w-60 md:w-full"
                 type="text"
                 name="category"
                 placeholder="Planned"
@@ -152,7 +152,7 @@ const EditFeedback = () => {
               etc.
             </p>
             <textarea
-              className="bg-[#F7F8FD] "
+              className="bg-[#F7F8FD] md:w-full"
               name="details"
               placeholder="It would help people with light sensitivities and who prefer dark mode."
               id=""
@@ -160,14 +160,14 @@ const EditFeedback = () => {
               rows="10"
             ></textarea>
           </div>
-          <div className="flex flex-col text-white">
-            <button className="bg-[#AD1FEA] w-60 rounded-lg p-1 my-1">
+          <div className="flex flex-col text-white md:flex md:flex-row-reverse  md:w-96">
+            <button className="bg-[#AD1FEA] w-60 rounded-lg p-1 my-1 md:ml-12 md:w-80 md:mt-4 ">
               Save Change
             </button>
-            <button className="bg-[#3A4374] w-60 rounded-lg p-1 my-1">
+            <button className="bg-[#3A4374] w-60 rounded-lg p-1 my-1 md:ml-16 md:mt-4">
               Cancel
             </button>
-            <button className="bg-[#D73737] w-60 rounded-lg p-1 my-1">
+            <button className="bg-[#D73737] w-60 rounded-lg p-1 my-1 md:mt-4">
               Delete
             </button>
           </div>

@@ -26,7 +26,7 @@ const AllSuggestions = () => {
               </svg>
               <p>9</p>
             </span>
-            <span className="flex mt-2 md:absolute  md:end-0 md:mr-4 ">
+            <span className="flex mt-2 ">
               <svg
                 className="mt-1"
                 xmlns="http://www.w3.org/2000/svg"
