@@ -11,7 +11,7 @@ const AllSuggestions = () => {
     console.log(suggestions);
   }, []);
   return (
-    <div className=" flex flex-col  items-center  bg-[#F7F8FD] w-96  ml-4 mt-2 p-4 h-max md:w-full">
+    <div className=" flex flex-col  items-center  bg-[#F7F8FD] w-96   mt-2 p-4 h-max md:w-full">
       {suggestions.map((suggestion, key) => (
         <div className="  flex flex-col rounded-lg border-8 border-white bg-[#FFFFFF] w-fit h-56 mb-2 md:w-full md:px-20 md:py-8 ">
           <h2 className="font-bold text-[#3A4374]">{suggestion.title}</h2>
@@ -32,7 +32,7 @@ const AllSuggestions = () => {
                   viewBox="0 0 9 7"
                   fill="none"
                 >
-                  <path d="M0 6L4 2L8 6" stroke="#4661E6" stroke-width="2" />
+                  <path d="M0 6L4 2L8 6" stroke="#4661E6" strokeWidth="2" />
                 </svg>
                 <p>{suggestion.upvotes}</p>
               </span>
@@ -50,7 +50,9 @@ const AllSuggestions = () => {
                     fill="#CDD2EE"
                   />
                 </svg>
-                <p className="ml-1">0</p>
+                <p className="ml-1">
+                  {suggestion.comments ? suggestion.comments.length : 0}
+                </p>
               </span>
             </div>
           </div>

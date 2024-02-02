@@ -35,7 +35,7 @@ const Section = () => {
             <Roadmap />
           </div>
         </div>
-        <div className="lg:hidden md:mx-6">
+        <div className=" lg:hidden md:mx-6">
           <Header />
         </div>
         <div className="lg:hidden   ">
