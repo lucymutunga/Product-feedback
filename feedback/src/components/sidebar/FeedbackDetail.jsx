@@ -1,7 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import image1 from "../../assets/user-images/image.png";
+import data from "../../../data.json";
+
 const FeedbackDetail = () => {
+  const { suggestionId } = useParams();
+  const [suggestions, setSuggestions] = useState([]);
+  const [selectedSuggestion, setSelectedSuggestion] = useState(null);
+
+  useEffect(() => {
+    setSuggestions(data.productRequests);
+    const parsedSuggestionId = parseInt(suggestionId, 10);
+    setSelectedSuggestion(parsedSuggestionId);
+  }, [suggestionId]);
+
+  const selectedSuggestionComments = selectedSuggestion
+    ? suggestions.find((suggestion) => suggestion.id === selectedSuggestion)
+        .comments
+    : [];
+
   return (
     <div className="detail-container bg-[#F7F8FD] w-96 h-max p-4">
       <div className="feedcontent">
@@ -71,70 +88,35 @@ const FeedbackDetail = () => {
         </div>
         <div className="comments-container bg-[#FFF] w-80 ml-3">
           <h1 className="text-[#3A4374] font-bold ml-5 p-4">4 Comments</h1>
-          <div className=" border-b">
-            <div className="flex justify-between p-6">
-              <img src={image1} alt="" className="rounded-full w-16 h-auto" />
-              <div className="flex flex-col">
-                <p className="text-[#3A4374] font-semibold">Elijah Moss</p>
-                <p className="text-[#647196] ">@hexagon.bestagon</p>
-              </div>
-              <button className="text-[#4661E6] font-semibold">Reply</button>
+
+          {selectedSuggestion !== null &&
+          selectedSuggestionComments.length > 0 ? (
+            <div className="selected-suggestion-comments">
+              {selectedSuggestionComments.map((comment) => (
+                <div key={comment.id} className="border-b mt-2">
+                  <div className="flex justify-between p-6">
+                    <img
+                      src={comment.user.image}
+                      alt="user"
+                      className="w-10 h-10"
+                    />
+                    <div className="flex flex-col">
+                      <p className="text-[#3A4374] font-semibold">
+                        {comment.user.name}
+                      </p>
+                      <p className="text-[#647196] ">{comment.user.username}</p>
+                    </div>
+                    <button className="text-[#4661E6] font-semibold">
+                      Reply
+                    </button>
+                  </div>
+                  <p className="p-4">{comment.content}</p>
+                </div>
+              ))}
             </div>
-            <p className="p-4">
-              Also, please allow styles to be applied based on system
-              preferences. I would love to be able to browse Frontend Mentor in
-              the evening after my device’s dark mode turns on without the
-              bright background it currently has.
-            </p>
-          </div>
-          <div className=" border-b mt-2">
-            <div className="flex justify-between p-6">
-              <p>image</p>
-              <div className="flex flex-col">
-                <p className="text-[#3A4374] font-semibold">Elijah Moss</p>
-                <p className="text-[#647196] ">@hexagon.bestagon</p>
-              </div>
-              <button className="text-[#4661E6] font-semibold">Reply</button>
-            </div>
-            <p className="p-4">
-              Also, please allow styles to be applied based on system
-              preferences. I would love to be able to browse Frontend Mentor in
-              the evening after my device’s dark mode turns on without the
-              bright background it currently has.
-            </p>
-          </div>
-          <div className=" border-b mt-2">
-            <div className="flex justify-between p-6">
-              <p>image</p>
-              <div className="flex flex-col">
-                <p className="text-[#3A4374] font-semibold">Elijah Moss</p>
-                <p className="text-[#647196] ">@hexagon.bestagon</p>
-              </div>
-              <button className="text-[#4661E6] font-semibold">Reply</button>
-            </div>
-            <p className="p-4">
-              Also, please allow styles to be applied based on system
-              preferences. I would love to be able to browse Frontend Mentor in
-              the evening after my device’s dark mode turns on without the
-              bright background it currently has.
-            </p>
-          </div>
-          <div className=" border-b mt-2">
-            <div className="flex justify-between p-6">
-              <p>image</p>
-              <div className="flex flex-col">
-                <p className="text-[#3A4374] font-semibold">Elijah Moss</p>
-                <p className="text-[#647196] ">@hexagon.bestagon</p>
-              </div>
-              <button className="text-[#4661E6] font-semibold">Reply</button>
-            </div>
-            <p className="p-4">
-              Also, please allow styles to be applied based on system
-              preferences. I would love to be able to browse Frontend Mentor in
-              the evening after my device’s dark mode turns on without the
-              bright background it currently has.
-            </p>
-          </div>
+          ) : (
+            <p>No comments yet.</p>
+          )}
         </div>
       </div>
       <div className="comment-container border start-0 ml-4 w-80 h-50 bg-white">

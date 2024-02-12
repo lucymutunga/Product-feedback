@@ -16,7 +16,7 @@ const App = () => {
           <Route path="/view" element={<ViewPage />} />
           <Route path="/all" element={<AllSuggestions />} />
           <Route path="/edit" element={<EditFeedback />} />
-          <Route path="/detail" element={<FeedbackDetail />} />
+          <Route path="/detail/:suggestionId" element={<FeedbackDetail />} />
         </Routes>
       </Router>
     </div>

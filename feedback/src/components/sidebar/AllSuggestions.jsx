@@ -1,19 +1,27 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import data from "../../../data.json";
-
-// todo add message count.
 
 const AllSuggestions = () => {
   const [suggestions, setSuggestions] = useState([]);
+  const navigate = useNavigate();
+
+  const handleClicked = (suggestionId) => {
+    navigate(`/detail/${suggestionId}`);
+  };
 
   useEffect(() => {
     setSuggestions(data.productRequests);
-    console.log(suggestions);
   }, []);
+
   return (
-    <div className=" flex flex-col  items-center  bg-[#F7F8FD] w-96   mt-2 p-4 h-max md:w-full">
+    <div className="flex flex-col items-center bg-[#F7F8FD] w-96 mt-2 p-4 h-max md:w-full">
       {suggestions.map((suggestion, key) => (
-        <div className="  flex flex-col rounded-lg border-8 border-white bg-[#FFFFFF] w-fit h-56 mb-2 md:w-full md:px-20 md:py-8 ">
+        <div
+          key={key}
+          onClick={() => handleClicked(suggestion.id)} // Pass suggestion.id to the handler
+          className="flex flex-col rounded-lg border-8 border-white bg-[#FFFFFF] w-fit h-56 mb-2 md:w-full md:px-20 md:py-8"
+        >
           <h2 className="font-bold text-[#3A4374]">{suggestion.title}</h2>
           <p className="text-[#647196] font-light">{suggestion.description}</p>
           <div className="rounded-lg bg-[#F2F4FF] w-40 h-7 mt-2">
@@ -23,7 +31,7 @@ const AllSuggestions = () => {
           </div>
           <div>
             <div className="flex justify-between">
-              <span className=" flex rounded-lg bg-[#F2F4FF] w-20 h-7 mt-2 p-1 ">
+              <span className="flex rounded-lg bg-[#F2F4FF] w-20 h-7 mt-2 p-1">
                 <svg
                   className="mt-2 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +44,7 @@ const AllSuggestions = () => {
                 </svg>
                 <p>{suggestion.upvotes}</p>
               </span>
-              <span className="flex mt-2 ">
+              <span className="flex mt-2">
                 <svg
                   className="mt-1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -61,4 +69,5 @@ const AllSuggestions = () => {
     </div>
   );
 };
+
 export default AllSuggestions;

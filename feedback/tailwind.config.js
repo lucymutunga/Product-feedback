@@ -3,11 +3,11 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "desktop-sug": "url(.../assets/shared/desktop/._background-header.png)",
-        "tablet-sug": "url(.../assets/shared/tablet/._background-header.png)",
-        "mobile-sug": "url(.../assets/shared/mobile/._background-header.png)",
-      },
+      // backgroundImage: {
+      //   "desktop-sug": "url(.../assets/shared/desktop/._background-header.png)",
+      //   "tablet-sug": "url(.../assets/shared/tablet/._background-header.png)",
+      //   "mobile-sug": "url(.../assets/shared/mobile/._background-header.png)",
+      // },
       colors: {
         primary: "#F2F4FF",
         secondary: "#FFFFFF",
