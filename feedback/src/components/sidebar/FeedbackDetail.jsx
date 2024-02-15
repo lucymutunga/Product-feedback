@@ -14,9 +14,12 @@ const FeedbackDetail = () => {
     setSelectedSuggestion(parsedSuggestionId);
   }, [suggestionId]);
 
-  const selectedSuggestionComments = selectedSuggestion
+  const selectedSuggestionData = selectedSuggestion
     ? suggestions.find((suggestion) => suggestion.id === selectedSuggestion)
-        .comments
+    : null;
+
+  const selectedSuggestionComments = selectedSuggestionData
+    ? selectedSuggestionData.comments
     : [];
 
   return (
@@ -32,9 +35,12 @@ const FeedbackDetail = () => {
               viewBox="0 0 5 10"
               fill="none"
             >
-              <path d="M4 9L0 5L4 1" stroke="#4661E6" stroke-width="2" />
+              <path d="M4 9L0 5L4 1" stroke="#4661E6" strokeWidth="2" />
             </svg>
-            <p className="text-[#647196]"> Go Back </p>
+            <Link to={"/"} className="text-[#647196]">
+              {" "}
+              Go Back{" "}
+            </Link>
           </div>
           <Link to={"/edit"}>
             <button className="bg-[#4661E6] rounded-lg p-1 text-white ">
@@ -43,16 +49,19 @@ const FeedbackDetail = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col rounded-lg border-8 border-white    bg-[#FFFFFF] w-80 h-60 mb-2 p-8 mt-8 ml-4 ">
-          <h2 className="font-bold text-[#3A4374]">Add a dark theme option</h2>
-          <p className="text-[#647196] font-light">
-            It would help people with light sensitivities and who prefer dark
-            mode.
-          </p>
-          <div className="rounded-lg bg-[#F2F4FF] w-40 h-7 mt-2">
-            <h2 className="text-[#4661E6] text-center ">Enhancement</h2>
-          </div>
-          <div>
+        {selectedSuggestionData && (
+          <div className="flex flex-col rounded-lg border-8 border-white bg-[#FFFFFF] w-80 h-60 mb-2 p-8 mt-8 ml-4 ">
+            <h2 className="font-bold text-[#3A4374]">
+              {selectedSuggestionData.title}
+            </h2>
+            <p className="text-[#647196] font-light">
+              {selectedSuggestionData.description}
+            </p>
+            <div className="rounded-lg bg-[#F2F4FF] w-40 h-7 mt-2">
+              <h2 className="text-[#4661E6] text-center ">
+                {selectedSuggestionData.category}
+              </h2>
+            </div>
             <div className="flex justify-between ">
               <span className=" flex rounded-lg bg-[#F2F4FF] w-20 h-7 mt-2 p-1 ">
                 <svg
@@ -65,7 +74,7 @@ const FeedbackDetail = () => {
                 >
                   <path d="M0 6L4 2L8 6" stroke="#4661E6" stroke-width="2" />
                 </svg>
-                <p>9</p>
+                <p>{selectedSuggestionData.upvotes}</p>
               </span>
               <span className="flex mt-2">
                 <svg
@@ -81,13 +90,15 @@ const FeedbackDetail = () => {
                     fill="#CDD2EE"
                   />
                 </svg>
-                <p className="ml-1">0</p>
+                <p className="ml-1">{selectedSuggestionComments.length}</p>
               </span>
             </div>
           </div>
-        </div>
+        )}
         <div className="comments-container bg-[#FFF] w-80 ml-3">
-          <h1 className="text-[#3A4374] font-bold ml-5 p-4">4 Comments</h1>
+          <h1 className="text-[#3A4374] font-bold ml-5 p-4">
+            {selectedSuggestionComments.length} Comments
+          </h1>
 
           {selectedSuggestion !== null &&
           selectedSuggestionComments.length > 0 ? (
