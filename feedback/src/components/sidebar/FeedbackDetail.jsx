@@ -130,18 +130,18 @@ const FeedbackDetail = () => {
           )}
         </div>
       </div>
-      <div className="comment-container border start-0 ml-4 w-80 h-50 bg-white">
-        <h1 className="font-bold">Add Comment</h1>
-        <div className="w-60 h-34">
-          <input
-            type="text"
-            placeholder="Type your comment here"
-            className="w-80"
-          />
-          <div>
-            <p>250 characters left</p>
-            <button className="bg-[#AD1FEA]">Post Comment</button>
-          </div>
+      <div className="comment-container mt-8  start-0 ml-4 w-80 h-50 bg-white">
+        <h1 className="font-semibold  py-8 px-4">Add Comment</h1>
+
+        <input
+          type="text"
+          placeholder="Type your comment here"
+          className="w-[279] h-[80] bg-[#3A4374]  py-4 px-4 ml-4"
+        />
+
+        <div className="flex ml-4 mt-2">
+          <p>250 characters left</p>
+          <button className="bg-[#AD1FEA]">Post Comment</button>
         </div>
       </div>
     </div>
