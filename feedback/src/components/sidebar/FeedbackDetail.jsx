@@ -38,8 +38,7 @@ const FeedbackDetail = () => {
               <path d="M4 9L0 5L4 1" stroke="#4661E6" strokeWidth="2" />
             </svg>
             <Link to={"/"} className="text-[#647196]">
-              {" "}
-              Go Back{" "}
+              Go Back
             </Link>
           </div>
           <Link to={"/edit"}>
