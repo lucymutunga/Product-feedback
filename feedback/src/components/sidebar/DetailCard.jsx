@@ -22,8 +22,8 @@ const DetailCard = () => {
     : [];
 
   return (
-    <div className="container bg-[#F7F8FD] w-96 h-max p-4">
-      <div className="flex justify-between p-6">
+    <div className=" md:container bg-[#F7F8FD] w-96 h-max p-4">
+      <div className="md:flex justify-between p-6">
         <div className="flex p-1">
           <svg
             className="mt-2 mr-1"
@@ -61,7 +61,7 @@ const DetailCard = () => {
               </svg>
               <p>{selectedSuggestionData.upvotes}</p>
             </span>
-            <div className="flex flex-col">
+            <div className=" md:flex flex-col">
               <h2 className="font-bold text-[#3A4374]">
                 {selectedSuggestionData.title}
               </h2>
@@ -92,7 +92,7 @@ const DetailCard = () => {
         </div>
       )}
 
-      <div className="comments-container bg-[#FFF] w-80 ml-3">
+      <div className=" md:comments-container bg-[#FFF] w-80 ml-3">
         <h1 className="text-[#3A4374] font-bold ml-5 p-4">
           {selectedSuggestionComments.length} Comments
         </h1>
@@ -108,7 +108,7 @@ const DetailCard = () => {
                     alt="user"
                     className="w-10 h-10"
                   />
-                  <div className="flex flex-col">
+                  <div className=" md:flex flex-col">
                     <p className="text-[#3A4374] font-semibold">
                       {comment.user.name}
                     </p>
@@ -127,7 +127,7 @@ const DetailCard = () => {
         )}
       </div>
 
-      <div className="comment-container mt-8 start-0 ml-4 w-80 h-50 bg-white">
+      <div className=" md:comment-container mt-8 start-0 ml-4 w-80 h-50 bg-white">
         <h1 className="font-semibold  py-6 px-4">Add Comment</h1>
 
         <input
@@ -136,7 +136,7 @@ const DetailCard = () => {
           className="w-11/12  h-[80] bg-[#F7F8FD]  py-4 px-4 ml-4 "
         />
 
-        <div className="flex  justify-between ml-4 py-8">
+        <div className=" md:flex  justify-between ml-4 py-8">
           <p className="text-[#647196]">250 characters left</p>
           <button className="bg-[#AD1FEA] rounded-lg text-white p-1 mr-2">
             Post Comment
