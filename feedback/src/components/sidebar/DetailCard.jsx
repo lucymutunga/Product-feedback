@@ -22,7 +22,7 @@ const DetailCard = () => {
     : [];
 
   return (
-    <div className=" md:container bg-[#F7F8FD] w-96 h-max p-4">
+    <div className=" md:w-full bg-[#F7F8FD] w-96 h-max p-4">
       <div className="md:flex justify-between p-6">
         <div className="flex p-1">
           <svg
@@ -92,14 +92,14 @@ const DetailCard = () => {
         </div>
       )}
 
-      <div className=" md:comments-container bg-[#FFF] w-80 ml-3">
+      <div className=" md:comments-container bg-[#FFF] w-fit ml-3">
         <h1 className="text-[#3A4374] font-bold ml-5 p-4">
           {selectedSuggestionComments.length} Comments
         </h1>
 
         {selectedSuggestion !== null &&
         selectedSuggestionComments.length > 0 ? (
-          <div className="selected-suggestion-comments">
+          <div className="md:w-100 selected-suggestion-comments">
             {selectedSuggestionComments.map((comment) => (
               <div key={comment.id} className="border-b mt-2">
                 <div className="flex justify-between p-6">
