@@ -22,7 +22,7 @@ const DetailCard = () => {
     : [];
 
   return (
-    <div className=" md:w-full bg-[#F7F8FD] w-96 h-max p-4">
+    <div className=" md:w-full bg-[#F7F8FD] w-96 h-max p-4 lg:flex lg:flex-col lg:items-center">
       <div className="md:flex justify-between p-6">
         <div className="flex p-1">
           <svg
@@ -127,18 +127,18 @@ const DetailCard = () => {
         )}
       </div>
 
-      <div className=" md:comment-container mt-8 start-0 ml-4 w-80 h-50 bg-white">
+      <div className=" md:comment-container mt-8 start-0 ml-4 w-80 h-50 bg-white lg:w-[756px] lg:h-[246px]">
         <h1 className="font-semibold  py-6 px-4">Add Comment</h1>
 
         <input
           type="text"
           placeholder="Type your comment here"
-          className="w-11/12  h-[80] bg-[#F7F8FD]  py-4 px-4 ml-4 "
+          className="w-11/12  h-[80] bg-[#F7F8FD]  py-4 px-4 ml-4 lg:w-[664px] lg:h-[80px]"
         />
 
         <div className=" md:flex  justify-between ml-4 py-8">
-          <p className="text-[#647196]">250 characters left</p>
-          <button className="bg-[#AD1FEA] rounded-lg text-white p-1 mr-2">
+          <p className="text-[#647196] lg:ml-2">250 characters left</p>
+          <button className="bg-[#AD1FEA] rounded-lg text-white p-1 mr-2 lg:mr-20">
             Post Comment
           </button>
         </div>
