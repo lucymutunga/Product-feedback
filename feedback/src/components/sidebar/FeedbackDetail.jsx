@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import image1 from "../../assets/user-images/image.png";
+
 import data from "../../../data.json";
 import DetailCard from "./DetailCard";
+import TabletCard from "./TabletCard";
 
 const FeedbackDetail = () => {
   const { suggestionId } = useParams();
@@ -22,11 +23,13 @@ const FeedbackDetail = () => {
   const selectedSuggestionComments = selectedSuggestionData
     ? selectedSuggestionData.comments
     : [];
-  const isTabletScreen = Window.innerWidth >= 768 && Window.innerWidth <= 1024;
+  const isTabletScreen = window.innerWidth >= 768 && window.innerWidth <= 1024;
   const isDesktopScreen = window.innerWidth >= 1024;
   const isMobileScreen = window.innerWidth < 768;
-  if (isTabletScreen || isDesktopScreen) {
+  if (isDesktopScreen) {
     return <DetailCard />;
+  } else if (isTabletScreen) {
+    return <TabletCard />;
   } else if (isMobileScreen) {
     return (
       <div className="detail-container bg-[#F7F8FD] w-96 h-max p-4">

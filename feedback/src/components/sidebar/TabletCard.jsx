@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import data from "../../../data.json";
 
-const DetailCard = () => {
+const TabletCard = () => {
   const { suggestionId } = useParams();
   const [suggestions, setSuggestions] = useState([]);
   const [selectedSuggestion, setSelectedSuggestion] = useState(null);
@@ -22,9 +22,9 @@ const DetailCard = () => {
     : [];
 
   return (
-    <div className=" md:w-full bg-[#F7F8FD] w-96 h-max p-4 lg:flex lg:flex-col lg:items-center ">
-      <div className="flex justify-between p-6 lg:w-[756px]">
-        <div className="flex p-1 lg:w-[756px]">
+    <div className="  bg-[#F7F8FD] w-[768px] h-[1436px] p-4  ">
+      <div className="flex justify-between p-6 w-[689px] h-[151]">
+        <div className="flex p-1 w-[689px]">
           <svg
             className="mt-2 mr-1"
             xmlns="http://www.w3.org/2000/svg"
@@ -46,8 +46,8 @@ const DetailCard = () => {
         </Link>
       </div>
       {selectedSuggestionData && (
-        <div className="rounded-lg border-8 border-white bg-[#FFFFFF] lg:w-[756px] ">
-          <div className="flex space-x-4 lg:space-x-20">
+        <div className="rounded-lg border-8 border-white bg-[#FFFFFF] mb-4 w-[689px] h-[151px]">
+          <div className="flex  justify-between ">
             <span className="flex flex-col rounded-md bg-[#F7F8FD] w-8 h-12 p-2 ">
               <svg
                 className="ml-1 "
@@ -61,7 +61,7 @@ const DetailCard = () => {
               </svg>
               <p>{selectedSuggestionData.upvotes}</p>
             </span>
-            <div className=" md:flex flex-col">
+            <div className=" flex flex-col mr-28">
               <h2 className="font-bold text-[#3A4374]">
                 {selectedSuggestionData.title}
               </h2>
@@ -74,7 +74,7 @@ const DetailCard = () => {
             </div>
             <span className="flex mt-2">
               <svg
-                className="mt-1 lg:ml-32"
+                className="mt-1 mr-2"
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
                 height="16"
@@ -86,20 +86,20 @@ const DetailCard = () => {
                   fill="#CDD2EE"
                 />
               </svg>
-              <p className="ml-1">{selectedSuggestionComments.length}</p>
+              <p className="mr-6">{selectedSuggestionComments.length}</p>
             </span>
           </div>
         </div>
       )}
 
-      <div className=" comments-container bg-[#FFF] w-fit ml-3">
+      <div className=" comments-container bg-[#FFF] w-[689px] h-[151px]">
         <h1 className="text-[#3A4374] font-bold ml-5 p-4">
           {selectedSuggestionComments.length} Comments
         </h1>
 
         {selectedSuggestion !== null &&
         selectedSuggestionComments.length > 0 ? (
-          <div className="md:w-100 selected-suggestion-comments lg:w-[756px]">
+          <div className="md:w-100 selected-suggestion-comments ">
             {selectedSuggestionComments.map((comment) => (
               <div key={comment.id} className="border-b mt-2">
                 <div className="flex justify-between p-6">
@@ -127,18 +127,18 @@ const DetailCard = () => {
         )}
       </div>
 
-      <div className=" md:comment-container mt-8 start-0 ml-4 w-80 h-50 bg-white lg:w-[756px] lg:h-[246px]">
+      <div className=" md:comment-container mt-8 start-0 ml-4 w-80 h-50 bg-white ">
         <h1 className="font-semibold  py-6 px-4">Add Comment</h1>
 
         <input
           type="text"
           placeholder="Type your comment here"
-          className="w-11/12  h-[80] bg-[#F7F8FD]  py-4 px-4 ml-4 lg:w-[664px] lg:h-[80px]"
+          className="w-11/12  h-[80] bg-[#F7F8FD]  py-4 px-4 ml-4 "
         />
 
         <div className=" md:flex  justify-between ml-4 py-8">
           <p className="text-[#647196] lg:ml-2">250 characters left</p>
-          <button className="bg-[#AD1FEA] rounded-lg text-white p-1 mr-2 lg:mr-20">
+          <button className="bg-[#AD1FEA] rounded-lg text-white p-1 mr-2 ">
             Post Comment
           </button>
         </div>
@@ -146,5 +146,4 @@ const DetailCard = () => {
     </div>
   );
 };
-
-export default DetailCard;
+export default TabletCard;

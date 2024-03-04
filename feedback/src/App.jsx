@@ -6,7 +6,7 @@ import ViewPage from "./components/sidebar/ViewPage";
 import AllSuggestions from "./components/sidebar/AllSuggestions";
 import EditFeedback from "./components/sidebar/EditFeedback";
 import FeedbackDetail from "./components/sidebar/FeedbackDetail";
-import DetailCard from "./components/sidebar/DetailCard";
+
 const App = () => {
   return (
     <div>
@@ -18,7 +18,6 @@ const App = () => {
           <Route path="/all" element={<AllSuggestions />} />
           <Route path="/edit" element={<EditFeedback />} />
           <Route path="/detail/:suggestionId" element={<FeedbackDetail />} />
-          <Route path="/card" element={<DetailCard />} />
         </Routes>
       </Router>
     </div>
