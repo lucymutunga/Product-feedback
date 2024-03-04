@@ -22,9 +22,9 @@ const DetailCard = () => {
     : [];
 
   return (
-    <div className=" md:w-full bg-[#F7F8FD] w-96 h-max p-4 lg:flex lg:flex-col lg:items-center">
-      <div className="md:flex justify-between p-6">
-        <div className="flex p-1">
+    <div className=" md:w-full bg-[#F7F8FD] w-96 h-max p-4 lg:flex lg:flex-col lg:items-center ">
+      <div className="md:flex justify-between p-6 lg:w-[756px]">
+        <div className="flex p-1 lg:w-[756px]">
           <svg
             className="mt-2 mr-1"
             xmlns="http://www.w3.org/2000/svg"
@@ -46,11 +46,11 @@ const DetailCard = () => {
         </Link>
       </div>
       {selectedSuggestionData && (
-        <div className="rounded-lg border-8 border-white bg-[#FFFFFF]">
-          <div className="flex space-x-4">
+        <div className="rounded-lg border-8 border-white bg-[#FFFFFF] lg:w-[756px] ">
+          <div className="flex space-x-4 lg:space-x-20">
             <span className="flex flex-col rounded-md bg-[#F7F8FD] w-8 h-12 p-2 ">
               <svg
-                className="ml-1"
+                className="ml-1 "
                 xmlns="http://www.w3.org/2000/svg"
                 width="9"
                 height="7"
@@ -74,7 +74,7 @@ const DetailCard = () => {
             </div>
             <span className="flex mt-2">
               <svg
-                className="mt-1"
+                className="mt-1 lg:ml-32"
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
                 height="16"
@@ -92,14 +92,14 @@ const DetailCard = () => {
         </div>
       )}
 
-      <div className=" md:comments-container bg-[#FFF] w-fit ml-3">
+      <div className=" comments-container bg-[#FFF] w-fit ml-3">
         <h1 className="text-[#3A4374] font-bold ml-5 p-4">
           {selectedSuggestionComments.length} Comments
         </h1>
 
         {selectedSuggestion !== null &&
         selectedSuggestionComments.length > 0 ? (
-          <div className="md:w-100 selected-suggestion-comments">
+          <div className="md:w-100 selected-suggestion-comments lg:w-[756px]">
             {selectedSuggestionComments.map((comment) => (
               <div key={comment.id} className="border-b mt-2">
                 <div className="flex justify-between p-6">
@@ -108,8 +108,8 @@ const DetailCard = () => {
                     alt="user"
                     className="w-10 h-10"
                   />
-                  <div className=" md:flex flex-col">
-                    <p className="text-[#3A4374] font-semibold">
+                  <div className=" flex flex-col">
+                    <p className="text-[#3A4374] font-semibold lg:mr-96">
                       {comment.user.name}
                     </p>
                     <p className="text-[#647196] ">{comment.user.username}</p>
