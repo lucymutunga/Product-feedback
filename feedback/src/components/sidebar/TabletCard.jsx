@@ -109,7 +109,7 @@ const TabletCard = () => {
                     className="w-10 h-10"
                   />
                   <div className=" flex flex-col">
-                    <p className="text-[#3A4374] font-semibold lg:mr-96">
+                    <p className="text-[#3A4374] font-semibold  mr-96">
                       {comment.user.name}
                     </p>
                     <p className="text-[#647196] ">{comment.user.username}</p>
@@ -118,7 +118,7 @@ const TabletCard = () => {
                     Reply
                   </button>
                 </div>
-                <p className="p-4">{comment.content}</p>
+                <p className="p-10">{comment.content}</p>
               </div>
             ))}
           </div>
@@ -127,7 +127,7 @@ const TabletCard = () => {
         )}
       </div>
 
-      <div className=" md:comment-container mt-8 start-0 ml-4 w-80 h-50 bg-white ">
+      <div className=" md:comment-container mt-96 start-0 ml-4 w-[756] h-50 bg-white ">
         <h1 className="font-semibold  py-6 px-4">Add Comment</h1>
 
         <input
